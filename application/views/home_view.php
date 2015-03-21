@@ -13,7 +13,7 @@
             <i class="fa fa-facebook"></i> Sign in with Facebook
         </a>
         <br><p>-OR-</p>
-        <a class="btn btn-block btn-social btn-reddit" href="homepage/viewmap">
+        <a class="btn btn-block btn-social btn-reddit" href="homepage/viewmap/1">
             <i class="fa fa-reddit"></i> View Map Anonymously
         </a>
     </div>

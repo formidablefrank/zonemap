@@ -84,26 +84,4 @@ $(document).ready(function(){
       }
     });
   });
-
-  $('.slider-nav').slick({
-    // //arrows: true,
-    // infinite: true,
-    // dots: true,
-    // speed: 500,
-    // adaptiveHeight: true,
-    // //centerMode: true,
-    // //centerPadding: '60px',
-    // slidesToShow: 3,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
-    // //fade: true,
-    // //cssEase: 'linear',
-    // asNavFor: '.slider-for',
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true
-  });
 });
