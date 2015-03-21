@@ -20,7 +20,9 @@
         <div class="small-3">
             <input id="searchPlace" type="text" placeholder="Search place" style=" border: 3px gray solid" />
             <br/>
-            <p id="info"></p>
+            <div id="info">
+
+            </div>
         </div>
     </div>
     <div id="mapContainer"></div>
