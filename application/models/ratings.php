@@ -11,8 +11,7 @@ class Ratings extends CI_model{
             'point_id' => $point_id,
             'rate' => $rate
         );
-        $this->db->insert('points', $data);
-        return $this->db->insert_id();
+        $this->db->insert('ratings', $data);
     }
 
     function getRating($point_id){

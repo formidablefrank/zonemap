@@ -40,6 +40,13 @@
                     echo $comment->comment;
                     echo '<br/>';
                 }
+                echo 'Incidents:';
+                foreach ($incidents as $incident) {
+                    echo $incident->incident_id;
+                    echo '->';
+                    echo $incident->freq;
+                    echo '<br>';
+                }
             }
             ?>
             </div>

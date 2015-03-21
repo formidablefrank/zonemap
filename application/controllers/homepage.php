@@ -23,6 +23,7 @@ class Homepage extends CI_Controller {
 		$this->load->model('points');
 		$this->load->model('ratings');
 		$this->load->model('comments');
+		$this->load->model('incidents');
 	}
 
 	public function index(){
@@ -37,10 +38,11 @@ class Homepage extends CI_Controller {
 		$data['point'] = $this->points->getPoint($point_id);
 		$data['rating'] = $this->ratings->getRating($point_id);
 		$data['comments'] = $this->comments->getComments($point_id);
+		$data['incidents'] = $this->incidents->getIncidents($point_id);
 		$data['title'] = 'DangerZoneMap | ' . $data['point'][0]->address;
 		$this->load->view('map_view', $data);
-		// foreach ($data['point'] as $row) {
-		// 	echo $row->lat;
+		// foreach ($data['incidents'] as $row) {
+		// 	echo $row->freq;
 		// };
 		// echo $data['point'][0]->lat;
 	}
@@ -50,8 +52,18 @@ class Homepage extends CI_Controller {
 		redirect(site_url().'homepage/viewmap/'.$insert_id, 'refresh');
 	}
 
+	public function addComment($point_id, $comment, $username){
+		$this->comments->addComment($point_id, $comment, $username);
+		redirect(site_url().'homepage/viewmap/'.$point_id, 'refresh');
+	}
+
 	public function addRating($point_id, $rate){
 		$this->ratings->addRating($point_id, $rate);
+		redirect(site_url().'homepage/viewmap/'.$point_id, 'refresh');
+	}
+
+	public function addIncident($point_id, $incident_no){
+		$this->incidents->addIncident($point_id, $incident_no);
 		redirect(site_url().'homepage/viewmap/'.$point_id, 'refresh');
 	}
 }
