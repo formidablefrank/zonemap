@@ -55,39 +55,3 @@ var behavior = new H.mapevents.Behavior(mapEvents);
 //     { content: '<b>Hello World!' }
 // );
 // ui.addBubble(bubble);
-
-$(document).ready(function(){
-    $('#searchPlace').keyup(function(event){
-        if(event.keyCode == 13){
-            var geocodingParams = {
-                searchText: $(this).val()
-            };
-
-            //Define callback function to process geocoding response
-            var onResult = function(result){
-                var locations = result.Response.View[0].Result, position, marker;
-                // add a marker for each location found
-                for(i = 0; i < locations.length; i++){
-                    var xlat = locations[i].Location.DisplayPosition.Latitude, xlng = locations[i].Location.DisplayPosition.Longitude;
-                    position = {
-                        lat: xlat,
-                        lng: xlng
-                        };
-                    var marker = new H.map.Marker(position);
-                    map.addObject(marker);
-                    map.setZoom(15);
-                    map.setCenter({ lat : xlat, lng : xlng});
-                    marker.addEventListener('tap', function(event){
-                        $('#info').text("info here");
-                    });
-                }
-            };
-
-            //Get instance of the geocoding service
-            var geocoder = platform.getGeocodingService();
-
-            //Call geocoder, callback if error
-            geocoder.geocode(geocodingParams, onResult, function(e){ alert(e); });
-        }
-    });
-});

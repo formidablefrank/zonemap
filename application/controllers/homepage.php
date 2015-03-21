@@ -52,7 +52,7 @@ class Homepage extends CI_Controller {
 		redirect(site_url().'homepage/viewmap/'.$insert_id, 'refresh');
 	}
 
-	public function addComment($point_id, $comment, $username){
+	public function addComment($point_id, $comment, $username='anonymous'){
 		$this->comments->addComment($point_id, $comment, $username);
 		redirect(site_url().'homepage/viewmap/'.$point_id, 'refresh');
 	}
