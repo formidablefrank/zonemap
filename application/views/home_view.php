@@ -14,12 +14,14 @@
                 </ul>
             </div>
         </div>
-        <ul id="gitna2">
-            <li class="banana"><img src="<?php echo site_url('img/theft2.png')?>" style="height: 120px; width 120px; "/></li>
-            <li class="banana"><img src="<?php echo site_url('img/kidnap.png')?>" style="height: 120px; width 120px; "/></li>
-            <li class="banana"><img src="<?php echo site_url('img/abuse.png')?>" style="height: 120px; width 120px; "/></li>
-            <li class="banana"><img src="<?php echo site_url('img/hack.png')?>" style="height: 120px; width 120px; "/></li>
-        </ul>
+        <div class="row" id="gitna2">
+            <ul>
+                <li class="banana"><img src="<?php echo site_url('img/theft2.png')?>" style="height: 120px; width 120px; "/></li>
+                <li class="banana"><img src="<?php echo site_url('img/kidnap.png')?>" style="height: 120px; width 120px; "/></li>
+                <li class="banana"><img src="<?php echo site_url('img/abuse.png')?>" style="height: 120px; width 120px; "/></li>
+                <li class="banana"><img src="<?php echo site_url('img/hack.png')?>" style="height: 120px; width 120px; "/></li>
+            </ul>
+        </div>
         <div class="text-center large-8 large-offset-2 medium-10 medium-offset-2 columns" id="tagline">
             <h2 id = "tagline">Travel safe.</h2>
         </div>

@@ -91,13 +91,18 @@ body {
 }
 
 #gitna1{
-    padding-left: 150px;
+    padding-left: 100px;
+    margin-left: 90px;
+}
+
+#gitna2{
+    padding-left: 115px;
     margin-left: 90px;
 }
 
 #or{
     color: #fff;
-    padding-left: 50px;
+    padding-left: 200px;
 }
 
 .tint {
