@@ -36,7 +36,7 @@
 
                 </div>
                 <div id="criteriaRow" class="row">
-                <ul>
+                <ul class = "potato">
                     <li><img src="<?php echo site_url('img/theft3.png')?>" style="height: 30px; width 30px; "/></li>
                     <li><img src="<?php echo site_url('img/harass.png')?>" style="height: 30px; width 30px; "/></li>
                     <li><img src="<?php echo site_url('img/no_light.png')?>" style="height: 30px; width 30px; "/></li>

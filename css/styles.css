@@ -54,5 +54,58 @@ p{
 
 
 body {
-    background-image: url("../img/background.jpeg");
+    background-image: url("../img/background.jpg");
+    background-color: rgba(0,0,0,0.9);
+}
+#thingo{
+    font-size: 40px;
+    color: white;
+}
+#homepage{
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    /*background-image: url("../img/background.jpg");*/
+/*    background-color: #ecf0f1;
+*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 40px;
+    min-height: 100%
+
+}
+#head{
+    margin-right: 227.656;
+}
+
+#tagline{
+    font-size: 30px;
+    position: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.banana{
+    padding: 50px;
+}
+
+#gitna1{
+    padding-left: 150px;
+    margin-left: 90px;
+}
+
+#or{
+    color: #fff;
+    padding-left: 50px;
+}
+
+.tint {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7);
 }
