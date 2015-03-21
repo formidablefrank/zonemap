@@ -20,3 +20,25 @@
 
 body{
 }
+
+#info{
+    padding-left: 25px;
+}
+
+.hr{
+    border-top: 5px;
+    border: #fff;
+}
+
+li{
+    display: inline;
+}
+
+p{
+    font-size: 12px;
+}
+
+
+
+
+}
