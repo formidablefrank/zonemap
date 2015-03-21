@@ -1,4 +1,3 @@
-
 <div class="row" id = "homepage">
     <div class="tint">
         <div class="text-center large-8 large-offset-2 medium-10 medium-offset-2 columns" id="head">
@@ -31,7 +30,7 @@
                 <i class="fa fa-facebook"></i> Sign in with Facebook
             </a>
             <br><p id="or">-OR-</p>
-            <a class="btn btn-block btn-social btn-reddit" href="homepage/viewmap">
+            <a class="btn btn-block btn-social btn-reddit" href="homepage/viewmap/1">
                 <i class="fa fa-reddit"></i> View Map Anonymously
             </a>
         </div>

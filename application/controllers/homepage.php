@@ -20,6 +20,9 @@ class Homepage extends CI_Controller {
 	 */
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('points');
+		$this->load->model('ratings');
+		$this->load->model('comments');
 	}
 
 	public function index(){
@@ -29,8 +32,26 @@ class Homepage extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 
-	public function viewmap(){
-		$data['title'] = 'View Map';
+	public function viewmap($point_id){
+		$data['points'] = $this->points->getAllPoints();
+		$data['point'] = $this->points->getPoint($point_id);
+		$data['rating'] = $this->ratings->getRating($point_id);
+		$data['comments'] = $this->comments->getComments($point_id);
+		$data['title'] = 'DangerZoneMap | ' . $data['point'][0]->address;
 		$this->load->view('map_view', $data);
+		// foreach ($data['point'] as $row) {
+		// 	echo $row->lat;
+		// };
+		// echo $data['point'][0]->lat;
+	}
+
+	public function addPoint($lat, $lng, $address){
+		$insert_id = $this->points->addPoint($lat, $lng, $address);
+		redirect(site_url().'homepage/viewmap/'.$insert_id, 'refresh');
+	}
+
+	public function addRating($point_id, $rate){
+		$this->ratings->addRating($point_id, $rate);
+		redirect(site_url().'homepage/viewmap/'.$point_id, 'refresh');
 	}
 }
