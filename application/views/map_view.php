@@ -51,6 +51,7 @@
             data-width="450"
             data-show-faces="true">
         </div>
+        </div>
     </div>
     <div id="mapContainer"></div>
     <script type="text/javascript" src="<?php echo site_url('js/vendor/jquery.js');?>"></script>
