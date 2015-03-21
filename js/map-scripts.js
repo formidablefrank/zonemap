@@ -11,7 +11,7 @@ var defaultLayers = platform.createDefaultLayers();
 var map = new H.Map(
     document.getElementById('mapContainer'),
     defaultLayers.normal.map,
-    { zoom: 10, center: { lat: 52.5, lng: 13.4 }}
+    { zoom: 15, center: { lat: 12, lng: 121 }}
 );
 
 //Create default UI
@@ -50,17 +50,13 @@ var behavior = new H.mapevents.Behavior(mapEvents);
 // map.setCenter(coords);
 
 //create and add bubble
-var bubble = new H.ui.InfoBubble(
-    { lng: 13.4, lat: 52.51},
-    { content: '<b>Hello World!' }
-);
-ui.addBubble(bubble);
+// var bubble = new H.ui.InfoBubble(
+//     { lng: 13.4, lat: 52.51},
+//     { content: '<b>Hello World!' }
+// );
+// ui.addBubble(bubble);
 
 $(document).ready(function(){
-    $('svg').on('click', function(){
-        console.log('hello');
-    });
-
     $('#searchPlace').keyup(function(event){
         if(event.keyCode == 13){
             var geocodingParams = {
