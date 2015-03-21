@@ -16,8 +16,8 @@
     <title><?php echo $title; ?></title>
 </head>
 <body>
-    <div class="row" style="position:absolute; z-index:9; margin:10px 10px">
-        <div class="small-3">
+    <div class="small-3" style="position:absolute; z-index:9; margin:10px 10px">
+        <div class="">
             <input id="searchPlace" type="text" placeholder="Search place" style=" border: 3px gray solid" />
             <br/>
             <div id="info">
@@ -44,6 +44,13 @@
             ?>
             </div>
         </div>
+        <hr/>
+        <div
+            class="fb-like"
+            data-send="true"
+            data-width="450"
+            data-show-faces="true">
+        </div>
     </div>
     <div id="mapContainer"></div>
     <script type="text/javascript" src="<?php echo site_url('js/vendor/jquery.js');?>"></script>
@@ -54,13 +61,16 @@
     <script type="text/javascript" src="<?php echo site_url('js/vendor/placeholder.js');?>"></script>
     <script type="text/javascript" src="<?php echo site_url('js/foundation.min.js');?>"></script>
     <script type="text/javascript" src="<?php echo site_url('js/foundation/foundation.orbit.js');?>"></script>
+    <script type="text/javascript" src="<?php echo site_url('js/scripts.js');?>"></script>
     <script type="text/javascript">
     <?php foreach ($points as $row) { ?>
         var position = { lat: <?php echo $row->lat; ?>, lng: <?php echo $row->lng; ?>};
-        var marker = new H.map.Marker(position);
+        var policeIcon;
         <?php if($row->policepoint) {?>
-            marker.setIcon
-        <?}?>
+            policeIcon = new H.map.Icon('<?php echo site_url("img/hack.png")?>');
+            marker.setIcon(policeIcon);
+        <?php } ?>
+        var marker = new H.map.Marker(position, {icon: policeIcon});
         map.addObject(marker);
         marker.addEventListener('tap', function(event){
             console.log('tap');

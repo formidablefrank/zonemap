@@ -33,11 +33,11 @@ class Homepage extends CI_Controller {
 	}
 
 	public function viewmap($point_id){
-		$data['title'] = 'View Map';
 		$data['points'] = $this->points->getAllPoints();
 		$data['point'] = $this->points->getPoint($point_id);
 		$data['rating'] = $this->ratings->getRating($point_id);
 		$data['comments'] = $this->comments->getComments($point_id);
+		$data['title'] = 'DangerZoneMap | ' . $data['point'][0]->address;
 		$this->load->view('map_view', $data);
 		// foreach ($data['point'] as $row) {
 		// 	echo $row->lat;
