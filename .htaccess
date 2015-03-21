@@ -1,0 +1,6 @@
+Header add Access-Control-Allow-Origin "*"
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets|css|js|fonts|img|robots\.txt|favicon\.ico)
+RewriteRule ^(.*)$ ./index.php/$1 [L]
