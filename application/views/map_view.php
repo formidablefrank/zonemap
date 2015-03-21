@@ -16,43 +16,15 @@
     <title><?php echo $title; ?></title>
 </head>
 <body>
-    <div class="small-2" style="position:absolute; z-index:10; margin:10px 8px">
+    <div class="small-2" style="position:absolute; z-index:10; margin:10px 10px">
+        <div class="">
             <input id="searchPlace" type="text" placeholder="Search place" style=" border: 3px gray solid" />
+        </div>
     </div>
     <div class="small-2" style="position:absolute; z-index:9; margin:10px 10px">
         <div id="side-panel" class="">
             <br/>
             <br/>
-            <!-- <div id="info">
-            <?php
-            // foreach ($point as $row) {
-            //     echo $row->address;
-            //     echo '<br/>';
-            //     echo '(';
-            //     echo $row->lat;
-            //     echo ',';
-            //     echo $row->lng;
-            //     echo ')';
-            //     echo '<br/>';
-            //     echo 'rating: '. $rating[0]->rate;
-            //     echo '<br/>';
-            //     echo 'Comments:<br/>';
-            //     foreach ($comments as $comment) {
-            //         echo $comment->username;
-            //         echo '<br/>';
-            //         echo $comment->comment;
-            //         echo '<br/>';
-            //     }
-            //     echo 'Incidents:';
-            //     foreach ($incidents as $incident) {
-            //         echo $incident->incident_id;
-            //         echo '->';
-            //         echo $incident->freq;
-            //         echo '<br>';
-            //     }
-            // }
-            ?>
-            </div> -->
             <div id="info">
                 <?php foreach($point as $row) {?>
                     <div id="placeTitleRow" class="row">
@@ -132,6 +104,7 @@
                 <?php } ?>
             </div>
         </div>
+        <br/>
         <div
             class="fb-like"
             data-send="true"
